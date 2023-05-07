@@ -1,0 +1,157 @@
+/* Variables  */
+/* Primary Colors  */
+:root {
+    /* Primary colors  */
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+ /* gradients  */
+    /* background  */
+    --light-slate-blue:  hsl(252, 100%, 67%);
+    --light-royal-blue:     hsl(241, 81%, 54%);
+    /* circle */
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue:hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+    --white : hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+ @font-face {
+    font-family: 'Hanken Grotesk';
+    src: url(/assets/fonts/static/HankenGrotesk-Medium.ttf), url(/assets/fonts/static/HankenGrotesk-Bold.ttf), url(/assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
+ }
+
+ /* *{
+   margin:0;
+   padding:0;
+} */
+
+html, body, #app {
+   height: 100vh;
+   margin: 0; 
+}
+
+body{
+   /* height: 100vh; */
+   margin: 0;
+    font-family: 'Hanken Grotesk';
+    font-weight:normal;
+font-style:normal;
+ }
+
+ p {
+    font-size: 18px;
+}
+
+.top{
+   /* background: var(--light-slate-blue); */
+    background: linear-gradient(0deg, var(--light-royal-blue) 50%, var(--light-slate-blue) 100%);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   border-radius: 0 0 20px 20px;
+   /* height: 300px; */
+   min-height: 300px;
+   color: white;
+}
+
+.top p {
+   width: 85%;
+   text-align: center;
+}
+
+.circle {
+   text-align: center;
+   margin: 0 auto;
+   min-width: 100px;
+   min-height: 100px;
+   display: flex; 
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   /* background: linear-gradient(0deg, var(--light-slate-blue) 0%, var(--light-royal-blue) 100%); */
+   background-color: var(--light-royal-blue);
+}
+
+.circle h1, .circle h6 {
+   padding:0;
+   margin:05px;
+}
+
+.lavender-text{
+   color: var(--light-lavender);
+   width: 75%
+}
+
+.summary{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   /* align-items: center; */
+   align-content: flex-start;
+   /* width: 80%; */
+   margin: auto;
+   margin: 5%;
+}
+
+.summary-components {
+   display: grid;
+   /* grid-template-columns:  1fr 1fr; adjust column width as needed */
+   grid-template-columns: auto 1fr 1fr;
+   height: 10vh;
+   gap: 10px; 
+   align-content: center;
+   padding: 5px;
+   margin:2%;
+   border-radius: 10px;
+
+
+}
+
+.summary-components p {
+   margin: 0; /* remove default margin */
+   /* padding: 0; remove default padding */
+}
+
+.summary-score {
+   text-align: right;
+   padding-right: 10px;
+}
+
+.red {
+   background-color:  hsla(0, 100%, 67%, .10) ;
+}
+.yellow {
+   background-color: hsla(39, 100%, 56%, .10);
+}
+.green {
+   background-color: hsla(166, 100%, 37%, .2);
+}
+.blue {
+   background-color: hsla(234, 85%, 45%, .10);
+}
+/* Mediq Queries */
+@media (max-width: 375px) {
+   .top {
+      width: 100%;
+   }
+   p {
+      /* font-size-adjust: inherit; */
+      font-size: 14px;
+   }
+}
+
+@media (min-width: 1440px) {
+   .top {
+      width: 50%
+   }
+}
