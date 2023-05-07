@@ -45,6 +45,10 @@ body{
 font-style:normal;
  }
 
+ #app {
+   box-shadow: 5px 5px 10px 5px, black;
+ }
+
  p {
     font-size: 18px;
 }
@@ -103,11 +107,15 @@ font-style:normal;
    margin: 5%;
 }
 
+.summary-title{
+   padding: 5px;
+   margin:2%;
+}
 .summary-components {
    display: grid;
    /* grid-template-columns:  1fr 1fr; adjust column width as needed */
    grid-template-columns: auto 1fr 1fr;
-   height: 10vh;
+   height: 8vh;
    gap: 10px; 
    align-content: center;
    padding: 5px;
@@ -125,22 +133,54 @@ font-style:normal;
 .summary-score {
    text-align: right;
    padding-right: 10px;
+   margin:2%;
+   
 }
 
 .red {
    background-color:  hsla(0, 100%, 67%, .10) ;
 }
+.red .score-text{
+   color:  hsla(0, 100%, 67%, 1) ;
+}
 .yellow {
    background-color: hsla(39, 100%, 56%, .10);
 }
+.yellow .score-text {
+   color: hsla(39, 100%, 56%, 1);
+}
+
 .green {
    background-color: hsla(166, 100%, 37%, .2);
 }
+.green .score-text{
+color: hsla(166, 100%, 37%, 1);
+}
+
 .blue {
    background-color: hsla(234, 85%, 45%, .10);
 }
+.blue .score-text {
+   color: hsla(234, 85%, 45%, 1);
+}
+
+.summary-score {
+   color: var(--dark-gray-blue)
+}
+.continue {
+   background-color: var(--dark-gray-blue);
+   color: white;
+   text-align: center;
+   height: 10vh;
+   border-radius: 10px;
+   padding: 5px;
+   margin:2%;
+}
+.continue:hover {
+    background: linear-gradient(0deg, var(--light-royal-blue) 50%, var(--light-slate-blue) 100%);
+}
 /* Mediq Queries */
-@media (max-width: 375px) {
+@media (max-width: 699px) {
    .top {
       width: 100%;
    }
@@ -148,10 +188,33 @@ font-style:normal;
       /* font-size-adjust: inherit; */
       font-size: 14px;
    }
+   
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 700px) {
+   body {
+      display: flex; 
+      justify-content: center;
+      align-items: center;
+   }
+   #app {
+      display: flex;
+      /* width: 50vw; */
+      /* height: 50vh; */
+
+      height: 50vh;
+      width: 40vw;
+      margin: 0 auto;
+   }
    .top {
-      width: 50%
+      height: 100%;
+      width: 50%;
+      border-radius: 25px;;
+   }
+   .summary {
+      height: 100%;
+      width: 50%;
+      margin: 0 auto;
+      margin-left: 1vw;
    }
 }
